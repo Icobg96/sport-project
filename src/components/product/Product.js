@@ -1,7 +1,13 @@
 import React from 'react';
 import Rating from './Rating';
+import { useHistory } from "react-router-dom";
 
 const Product = props => {
+
+    const history = useHistory();
+    function viewDetails() {
+        history.push("/product-details");
+    }
 
     return (
         <div className="col-md-3">
@@ -30,7 +36,7 @@ const Product = props => {
                         <div className="price">123$</div>
                     </div>
                     <div className="d-flex">
-                        <button type="button" className="btn btn-outline-primary card-button">Details</button>
+                        <button type="button" className="btn btn-outline-primary card-button" onClick={viewDetails}>Details</button>
                         <button type="button" className="btn btn-primary card-button">Action</button>
                     </div>
                 </div>

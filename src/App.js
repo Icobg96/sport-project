@@ -10,6 +10,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import Gallery from './pages/Gallery';
+import Product from './pages/Product';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 
@@ -43,6 +44,11 @@ function App() {
             <Route path="/gallery">
               <Layout>
                 <Gallery/>
+              </Layout>
+            </Route>
+            <Route path="/product-details">
+              <Layout>
+                <Product/>
               </Layout>
             </Route>
           </Switch>
